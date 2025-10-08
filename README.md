@@ -92,4 +92,17 @@ sudo journalctl -u AllskyMQTTBatteryMonitor.service -f
 
 ## Configuration within Allsky WebUI
 
-TODO
+Navigate to your allsky website and go to the settings page
+
+Scroll down and find the WebUI Configuration section
+![WebUI](doc/img/WebUIConfig.png)
+
+Within the system pages addition section you will add the full path to the text files
+of StaticVars.txt and BatteryPercent.txt with a colon between the two paths example provided below
+```
+/home/pi/AllskyMQTTBatteryMonitor/StaticVars.txt:/home/pi/AllskyMQTTBatteryMonitor/BatteryPercent.txt
+```
+
+Save the settings then go to the Allsky system page here you should find the static variables (without progress bars) to be Hostname, Pi model, Uptime, Property, Deployment and Battery Voltage.
+Then variables with progress bars to include Throttle Status, Memory Used, CPU Load, CPU Temperature, Disk Usage, ~/allsky/tmp Usage and Battery Percentage.
+![SystemPage](doc/img/System.png)
